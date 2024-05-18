@@ -20,14 +20,14 @@
     "mongo:generate": "cd prisma-module/mongo/prisma && prisma generate",
     "mongo:seed": "cd prisma-module/mongo/prisma && prisma db seed",
     "migrate": "cd prisma-module/postgres/prisma && prisma db push && cd ../mongo/prisma && prisma db push",
-    "migrate:full": "cd prisma-module/postgres/prisma && prisma db push && prisma db seed && cd ../mongo/prisma && prisma db push && prisma db seed ",
+    "migrate:full": "cd prisma-module/postgres/prisma && prisma db push && prisma db seed && cd ../../mongo/prisma && prisma db push && prisma db seed ",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "postinstall": "cd prisma-module/postgres/prisma && prisma generate && cd ../mongo/prisma && prisma generate"
+    "postinstall": "cd prisma-module/postgres/prisma && prisma generate && cd ../../mongo/prisma && prisma generate"
   },
   "prisma": {
     "seed": "ts-node ../seeds/seed.ts"

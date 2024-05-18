@@ -1,4 +1,4 @@
-import { PostgresService } from 'prisma-module/src/postgres.service';
+import { PostgresService } from '../../src/postgres.service';
 
 const prisma = new PostgresService();
 

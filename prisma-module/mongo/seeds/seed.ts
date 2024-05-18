@@ -1,4 +1,4 @@
-import { MongoService } from 'prisma-module/src/mongo.service';
+import { MongoService } from '../../src/mongo.service';
 
 const prisma = new MongoService();
 
